@@ -1,22 +1,36 @@
 /* Reset the page margin and center everything */
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  text-align: center;
+  align-items: center;
   height: 100vh;
   margin: 0;
-  padding: 0;
   font-family: Arial, sans-serif;
-  text-align: center;
   background-color: white;
   transition: background-color 0.5s ease;
 }
 
+/* Hidden Anniversary Text */
+#annivText {
+  opacity: 0;
+  visibility: hidden;
+  color: white;
+  font-size: 22px;
+  margin-top: 20px;
+  text-shadow: 0 0 10px rgba(255,255,255,0.7);
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+/* Show effect wehn toggled */
+#annivText.show {
+  opacity: 1;
+  visibility: visible;  
+}
+
 .card {
-  margin-top: 10px;
-  margin-bottom: 20px;
   background-color: slategrey;
-  padding: 15px;
+  padding: 20px;
   border-radius: 20px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0,0,0,0.4);
@@ -24,12 +38,10 @@ body {
 }
 
 /* Title style */
-h1 {
+h2 {
   color: #000;
-  margin-top: 50px;
 }
 
-/* Paragraph style */
 p {
   color: white;
   font-size: 15px;
@@ -50,5 +62,5 @@ button {
 
 /* Button hover effect */
 button:hover {
-  background-color: #000000;
+  background-color: #000 ;
 }
